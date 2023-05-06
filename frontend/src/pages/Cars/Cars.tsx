@@ -4,7 +4,6 @@ import NavBar from '../../componentes/NavBar/NavBar';
 import FootBar from '../../componentes/FootBar/FootBar';
 import { GrAddCircle } from 'react-icons/gr';
 import { useState } from 'react';
-
 import { ethers } from "ethers";
 import { toast } from 'react-toastify';
 

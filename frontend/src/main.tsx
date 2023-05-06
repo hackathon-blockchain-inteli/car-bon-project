@@ -2,13 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App.tsx'
-<<<<<<< Updated upstream
 import Exchange from './pages/Exchange/Exchange.tsx';
 import Transparency from './pages/Transparency/Transparency.tsx';
-=======
 import Home from './pages/Home/Home.tsx';
 import Cars from './pages/Cars/Cars.tsx';
->>>>>>> Stashed changes
 
 
 const router = createBrowserRouter([

@@ -10,13 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< Updated upstream
-    "bootstrap": "^5.2.3",
-=======
     "ethers": "^6.3.0",
->>>>>>> Stashed changes
     "react": "^18.2.0",
-    "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.11.1",

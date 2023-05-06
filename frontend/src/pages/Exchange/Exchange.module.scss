@@ -3,15 +3,18 @@
     flex-direction: column;
     background-color: #D9D9D9;
     padding-bottom: 50px;
+
     .h1{
         font-size: 50px;
     }
+
     .start{
         margin-top: 10px;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
+
     .btgDol{
         width: 310px;
         height: 60px;
@@ -20,22 +23,25 @@
         border-radius: 10px;
         margin-top: 35px;
     }
+
     .wordsbtg{
         display: flex;
         justify-content: center;
         font-size: 22px;
     }
+
     .allcards{
         display: flex;
         flex-direction: column;
         padding-left: 30px;
-
     }
+
     .cards{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
+    
     .onecard{
         display: flex;
         flex-direction: column;

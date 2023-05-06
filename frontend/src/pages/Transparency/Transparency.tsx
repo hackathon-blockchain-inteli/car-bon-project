@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from "./Transparency.module.scss";
-import Table from './../../components/Table.tsx';
+import Table from '../../componentes/Table/Table';
+import NavBar from '../../componentes/NavBar/NavBar';
+import FootBar from '../../componentes/FootBar/FootBar';
 
 
 const data = [
@@ -10,16 +12,18 @@ const data = [
 
 const Transparency: React.FC = () => {
   return (
-    <div className={styles.container}>
-        <div>
-            <h1 className={styles.h1}>Transactions History</h1>
-            <h3 className={styles.h3}>43290580834</h3>
-        </div>
-        <div className={styles.set_table}>
-        <div className={styles.table}>
+    <div>
+      <NavBar />
+      <div className={styles.container}>
+          <div>
+              <h1>Transactions History</h1>
+              <h3>Token: 43290580834</h3>
+          </div>
+          <div className={styles.table}>
             <Table data={data} />
-        </div>
-        </div>
+          </div>
+      </div>
+      <FootBar />
     </div>
   );
 }
