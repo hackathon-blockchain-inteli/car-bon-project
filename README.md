@@ -1,14 +1,14 @@
-# Car-bon - Claim Offset Carbon just by driving 
+# Carbon - Claim Offset Carbon just by driving 
 Car-bon coleta dados de emissão de carbono em carros utilizando IoT, incentivando o uso de carros elétricos ou híbridos. Os dados coletados são transformados em créditos de carbono na blockchain.
-## Inteli Blockchain 2023 Challenge - Car-bon - 2023
+## Inteli Blockchain 2023 Challenge - Carbon
 
 
 ## Our team
-- Ana Clara Loureiro Müller Zaidan (user experience, business and front-end development);
-- Bruno Otávio Bezerra de Meira (user experience, business and front-end development);
+- Ana Clara Loureiro Müller Zaidan (User Experience, business and front-end development);
+- Bruno Otávio Bezerra de Meira (User Experience, business and front-end development);
 - Eduardo Santos Barreto (Artificial Intelligence, IoT and back-end development);
-- Mariana Silva de Paula (business and front-end development);
-- Vinicios Venâncio Lugli (back-end development and BlockChain);
+- Mariana Silva de Paula (Business and front-end development);
+- Vinicios Venâncio Lugli (bBck-end development and BlockChain);
 
 ## Our solution
 
@@ -48,16 +48,18 @@ Car-bon coleta dados de emissão de carbono em carros utilizando IoT, incentivan
  - Solidt 0.8.19
  - Cartesi Machine with Custom Rollup runing AI
 
+## Arquithecture
+
 ## Layout
 
-You can see this application layout  [clicking here]. You'll need a  [Figma](https://www.figma.com/)  account.
+You can see this application layout  [clicking here](https://www.figma.com/file/NimQTWAvXkrCFHNCByUp3g/Frontend---CarBon?type=design&node-id=0%3A1&t=JYX38XFl5vKz2shA-1). You'll need a  [Figma](https://www.figma.com/)  account.
 
-## Arquithecture
+## Demo
 
 
 ## License
 
-Distributed under the MIT License. See `License for more information.
+Distributed under the MIT License. See [License](https://github.com/hackathon-blockchain-inteli/car-bon-project/blob/main/LICENSE) for more information.
 
 ## Collaborators 
 <table>
@@ -72,7 +74,7 @@ Distributed under the MIT License. See `License for more information.
     </td>
     <td align="center">
       <a href="https://www.linkedin.com/in/bruno-omeira/">
-        <img src="https://media.licdn.com/dms/image/D4E03AQETENKvzzStCQ/profile-displayphoto-shrink_800_800/0/1675081848558?e=1688601600&v=beta&t=OM0sv27IFqzBhywTaoa--r1RQFTRebAaMUIq_yen5yQ" width="100px;" alt="Bruno Meira profile image"/><br>
+        <img src="https://avatars.githubusercontent.com/u/99202553?v=4" width="100px;" alt="Bruno Meira profile image"/><br>
         <sub>
           <b>Bruno Meira</b>
         </sub>
