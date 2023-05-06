@@ -80,7 +80,7 @@ Distributed under the MIT License. See  colocar link  for more information.
     </td>
     <td align="center">
       <a href="https://www.linkedin.com/in/eduardosbarreto/">
-        <img src="https://media.licdn.com/dms/image/D4D03AQHcmdXszbRiEA/profile-displayphoto-shrink_400_400/0/1674764013909?e=1688601600&v=beta&t=SlwqWDqdgfXin1SxXfs1JJ7r122Y6bOJtch5T9hcfpk" width="100px;" alt="Eduardo Barreto profile image"/><br>
+        <img src="https://media.licdn.com/dms/image/D4E03AQETENKvzzStCQ/profile-displayphoto-shrink_800_800/0/1675081848558?e=1688601600&v=beta&t=OM0sv27IFqzBhywTaoa--r1RQFTRebAaMUIq_yen5yQ" width="100px;" alt="Eduardo Barreto profile image"/><br>
         <sub>
           <b>Eduardo Barreto</b>
         </sub>
