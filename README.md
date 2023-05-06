@@ -1,5 +1,7 @@
 # Carbon - Claim Offset Carbon just by driving 
-Car-bon coleta dados de emissão de carbono em carros utilizando IoT, incentivando o uso de carros elétricos ou híbridos. Os dados coletados são transformados em créditos de carbono na blockchain.
+Carbon é uma plataforma que possibilita que pessoas físicas resgatem Créditos de Carbono a partir da medição da quantidade de emissão de CO2 de seus veículos. Dessa forma, disponibilizando de uma exchange de compra e venda desses ativos, através do BTG dol.
+Tudo isso, graças a união de um dispositivo IoT, uma plataforma web, e as infinitas possibilitades da Blockchain.
+
 ## Inteli Blockchain 2023 Challenge - Carbon
 
 
@@ -11,7 +13,9 @@ Car-bon coleta dados de emissão de carbono em carros utilizando IoT, incentivan
 - Vinicios Venâncio Lugli (bBck-end development and BlockChain);
 
 ## Our solution
-
+Carbon coleta dados de emissão de carbono em carros utilizando IoT, incentivando o uso de carros elétricos ou híbridos. Os dados coletados são interpretados e podem gerar créditos de carbono na blockchain, que podem ser vendidos na própria plataforma para empresas que desejam compensar sua pegada de carbono.
+O usuário tem acesso a um dashboard que dispõe de previsões geradas por um modelo de regressão de AI, para visualizar um impacto a longo prazo e gerenciar seus Créditos.
+Todas as transações utilizam do BTG dol -uma stablecoin lastreada no dólar- como moeda, garantindo confiabilidade, segurança e transparência nas transações realizadas.
 
 ## Technologies
 
@@ -31,7 +35,7 @@ Car-bon coleta dados de emissão de carbono em carros utilizando IoT, incentivan
  - Node.js
  - Express
  
- ### Embeded/IoT:
+ ### Embeded/ IoT:
  - C++
  - Framework: Arduíno
  - Plarform.io
@@ -49,6 +53,7 @@ Car-bon coleta dados de emissão de carbono em carros utilizando IoT, incentivan
  - Cartesi Machine with Custom Rollup runing AI
 
 ## Arquithecture
+
 
 ## Layout
 
