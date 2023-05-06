@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+html{
+  padding: 0;
+  margin: 0;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: 'Poppins', sans-serif;
+  height: 97px;
+  align-items: center;
+  width: 100%;
+  background: white;
+}
+
+.Logo{
+  h1{
+    span{
+      color: #179D14;
+    }
+  }
+
+}
+
+.navMap{
+  color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: row;
+
+  p{
+    margin-right: 30px;
+  }
+
+  p:hover{
+    border-bottom: 1px solid black;
+    color: #179D14;
+    cursor: pointer;
+  }
+
+}
+
+.buttonFocus{
+  color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: row;
+
+  p:hover{
+    border-bottom: 1px solid black;
+    color: #179D14;
+    cursor: pointer;
+  }
+
+  button{
+    font-family: 'Poppins', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #179D14;
+    border-radius: 10px;
+    background: none;
+    margin-left: 15px;
+    height: 48px;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5px;
+
+    span{
+      color: #179D14;
+    }
+  }
+
+  button:hover{
+    color: white;
+    border: 1px solid white;
+    background: #179D14;
+    border-radius: 10px;
+    margin-left: 15px;
+    height: 48px;
+    cursor: pointer;
+
+    span{
+      color: black;
+    }
+  }
+
+}
