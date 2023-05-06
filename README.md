@@ -64,7 +64,7 @@ Distributed under the MIT License. See  colocar link  for more information.
   <tr>
     <td align="center">
       <a href="https://www.linkedin.com/in/ana-clara-loureiro-muller-zaidan/">
-        <img src="https://media.licdn.com/dms/image/C4E03AQFESfiDsz5Reg/profile-displayphoto-shrink_800_800/0/1646850304947?e=1688601600&v=beta&t=ZjRBXNdeJ_yFPBBZ_b0cX9ly3eWj41qfTrhmCfsCt_U" width="110px;" alt="Ana Clara Müller profile image"/><br>
+        <img src="https://media.licdn.com/dms/image/C4E03AQFESfiDsz5Reg/profile-displayphoto-shrink_800_800/0/1646850304947?e=1688601600&v=beta&t=ZjRBXNdeJ_yFPBBZ_b0cX9ly3eWj41qfTrhmCfsCt_U" width="100px;" alt="Ana Clara Müller profile image"/><br>
         <sub>
           <b>Ana Clara Müller</b>
         </sub>
