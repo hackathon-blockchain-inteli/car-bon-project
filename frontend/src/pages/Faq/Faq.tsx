@@ -11,7 +11,7 @@ const Faq: React.FC = () => {
       <div className={styles.container}>
         <div><h1>All about BTG dol</h1></div>
         <div className={styles.cardlist} >
-            <h2>What is a <span>stable coin?</span></h2>
+            <h2>What is a <span>stablecoin?</span></h2>
             <p>Stablecoins são, em geral, criptomoedas projetadas para manter um valor estável em relação a uma determinada moeda fiduciária, como o dólar americano. Ao contrário de outras criptomoedas que são conhecidas por sua volatilidade, as stablecoins são projetadas para serem estáveis e previsíveis em seu valor de mercado. Cada token da stablecoin representa uma unidade dessa moeda. Além disso, as stablecoins também podem ser usadas para transferências de valor rápidas e baratas, sem as taxas e limitações associadas às transferências tradicionais de moedas fiduciárias.</p>
         </div>
         <div className={styles.cardlist} >

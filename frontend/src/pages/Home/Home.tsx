@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "./Home.module.scss";
 import NavBar from '../../componentes/NavBar/NavBar';
 import FootBar from '../../componentes/FootBar/FootBar';
-import Mockap from '../../assets/mockap.png'
+import Mockup from '../../assets/mockup.png'
 import car from '../../assets/car.png';
 import stplace from '../../assets/stplace.png';
 import ndplace from '../../assets/ndplace.png';
@@ -20,21 +20,24 @@ const Home: React.FC = () => {
             <button>Get Started</button>
           </div>
           <div>
-            <img src={Mockap}></img>
+            <img src={Mockup}></img>
           </div>
         </div>
         <div className={styles.benefits}>
           <div>
             <h2>Get OffSet Carbon</h2>
             <p>Monitor your car's COˆ2 emission and earn OffSet Carbon Tokens</p>
+            <button>Get Start</button>
           </div>
           <div>
             <h2>All transations with BTG dol</h2>
             <p>Garanty the reliability, security and transparency of the BTG dol stablecoin</p>
+            <button>Learn more</button>
           </div>
           <div>
-            <h2>Compensate your company's carbon footprint</h2>
+            <h2>Compensate your carbon footprint</h2>
             <p>Buy OffSet Carbon Tokens with BTG dol</p>
+            <button>Go to exchange</button>
           </div>
         </div>
         <div className={styles.infoCar}>
