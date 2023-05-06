@@ -6,7 +6,7 @@ import Exchange from './pages/Exchange/Exchange.tsx';
 import Transparency from './pages/Transparency/Transparency.tsx';
 import Home from './pages/Home/Home.tsx';
 import Cars from './pages/Cars/Cars.tsx';
-import Faq from './pages/Faq/faq.tsx';
+import Faq from './pages/Faq/Faq.tsx';
 
 
 const router = createBrowserRouter([
