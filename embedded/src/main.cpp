@@ -3,15 +3,29 @@
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
 #include <time.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SH110X.h>
+#include <Wire.h>
+#include <Adafruit_MPU6050.h>
+#include <Adafruit_Sensor.h>
 
 #include "sensors/mq135.hpp"
 #include "credentials.hpp"
+#include "screen.hpp"
 
 #define TIME_BETWEEN_READINGS 350
 
 MQ135Sensor mq135;
 WiFiClientSecure espClient;
 PubSubClient client(espClient);
+Screen display;
+Adafruit_MPU6050 mpu;
+
+typedef struct
+{
+    float acceleration;
+    float co2;
+} Package;
 
 void setDateTime()
 {
@@ -78,12 +92,35 @@ void setup()
     setDateTime();
 
     connectMQTT();
+    display.init();
+
+    if (!mpu.begin())
+    {
+        Serial.println("Falha ao iniciar o sensor MPU6050!");
+        while (1)
+            ;
+    }
+
+    delay(1000);
 }
 
 void loop()
 {
-    client.publish(CONTRACT_ADDRESS, String(mq135.getCO2PPM()).c_str());
-    Serial.println(CONTRACT_ADDRESS + String(mq135.getCO2PPM()) + " ppm");
-    Serial.println();
+    sensors_event_t accelEvent;
+    sensors_event_t gyroEvent;
+    sensors_event_t tempEvent;
+    mpu.getEvent(&accelEvent, &gyroEvent, &tempEvent);
+    float c02 = mq135.getCO2PPM();
+    float acceleration = (accelEvent.acceleration.x + accelEvent.acceleration.y + accelEvent.acceleration.z) - 9.8;
+    client.publish(((String)CONTRACT_ADDRESS + (String) "/co2").c_str(), String(c02).c_str());
+    client.publish(((String)CONTRACT_ADDRESS + (String) "/acceleration").c_str(), String(acceleration).c_str());
+
+    display.clear();
+    display.drawTextCenter("Acceleration:", 90, 12, 1);
+    display.drawTextCenter(String(acceleration) + " m/s^2", 96, 24, 10);
+    display.drawTextCenter("CO2:", 64, 36, 1);
+    display.drawTextCenter(String(c02) + " PPM", 64, 48, 10);
+    display.display();
+
     delay(TIME_BETWEEN_READINGS);
 }
