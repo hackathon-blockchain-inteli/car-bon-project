@@ -56,15 +56,15 @@ const Home: React.FC = () => {
           <div className={styles.rankingList}>
             <div>
               <div className={styles.ndPlace}><img src={ndplace}></img></div>
-              <h2>2- Company B</h2>
+              <h2>2- XPTO</h2>
             </div>
             <div>
               <div className={styles.stPlace}><img src={stplace}></img></div>
-              <h2>1- Company A</h2>
+              <h2>1- CompNY</h2>
             </div>
             <div>
               <div className={styles.stPlaces}><img src={thplace}></img></div>
-              <h2>3- Company C</h2>
+              <h2>3- XIS</h2>
             </div>
           </div>
         </div>

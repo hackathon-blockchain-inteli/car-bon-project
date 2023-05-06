@@ -6,6 +6,9 @@ import { GrAddCircle } from 'react-icons/gr';
 import { useState } from 'react';
 import { ethers } from "ethers";
 import { toast } from 'react-toastify';
+import axios from 'axios';
+
+// Conectar o usuario ao metamask na rede mumbai
 
 const BlockchainIntegration = {
   connectToMetamask: async () => {
@@ -31,6 +34,18 @@ const BlockchainIntegration = {
     }
   },
 }
+
+// Axios para puxar do banco as tabelas
+
+axios.get('/api/tabela')
+  .then(response => {
+    const { datetime, type, value, hash, coppm } = response.data;
+  })
+  .catch(error => {
+    console.error(error);
+  });
+
+// chama a função de um contrato
 
 const Cars: React.FC = () => {
   const [account, setAccount] = useState('');
