@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App.tsx'
+import Exchange from './pages/Exchange/Exchange.tsx';
+import Transparency from './pages/Transparency/Transparency.tsx';
 
 
 const router = createBrowserRouter([
@@ -16,12 +18,12 @@ const router = createBrowserRouter([
 
   {
     path: "/exchange",
-    element: <App />,
+    element: <Exchange />,
   },
 
   {
     path: "/transparency",
-    element: <App />,
+    element: <Transparency />,
   },
 
   {

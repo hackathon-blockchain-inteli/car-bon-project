@@ -1,0 +1,81 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #D9D9D9;
+    padding-bottom: 50px;
+    .h1{
+        font-size: 50px;
+    }
+    .start{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .btgDol{
+        width: 310px;
+        height: 60px;
+        border:2px solid #179D14;
+        justify-content: center;
+        border-radius: 10px;
+        margin-top: 35px;
+    }
+    .wordsbtg{
+        display: flex;
+        justify-content: center;
+        font-size: 22px;
+    }
+    .allcards{
+        display: flex;
+        flex-direction: column;
+        padding-left: 30px;
+
+    }
+    .cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .onecard{
+        display: flex;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        border: 30px;
+        width: 480px;
+        height: 440px;
+        border-radius: 20px;
+        align-items: center;
+        margin-top: 60px;
+    }
+    .image{
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        background-color: #D9D9D9;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .line{
+        background-color: #000000;
+        width: 380px;
+        height: 1.5px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .specific{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .button{
+        width: 140px;
+        height: 50px;
+        background-color: #179D14;
+        border-radius: 15px;
+        border: #179D14;
+        color: #FFFFFF;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+}
