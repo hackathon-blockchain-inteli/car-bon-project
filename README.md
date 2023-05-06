@@ -57,7 +57,7 @@ You can see this application layout  [clicking here]. You'll need a  [Figma](htt
 
 ## License
 
-Distributed under the MIT License. See  colocar link  for more information.
+Distributed under the MIT License. See `License for more information.
 
 ## Collaborators 
 <table>
