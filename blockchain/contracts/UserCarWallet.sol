@@ -5,25 +5,27 @@ import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 
 interface TokenInterface {
     function mint(address account, uint256 amount) external;
-
-    function balanceOf(address account) external view returns (uint256);
 }
 
-contract UserCarContract {
+contract UserCarWallet {
     AggregatorV3Interface internal tokenPriceFeed;
     TokenInterface public tokenInterface;
-    uint256 public tokenPrice = 7300; //1 token = 73.00 usd, with 2 decimal places
+    uint256 public tokenPrice = 73000000; //1 token = 73.0000000 usd, with 6 decimal places
     address public tokenAddress;
     uint256 public tokenBalance;
 
     address public owner;
     address private manager;
 
-	String public uri;
+    string public uri;
 
     event BuyToken(address indexed buyer, uint256 amount);
 
-    constructor(address _tokenAddress, address _managerAddress, String memory _uri) {
+    constructor(
+        address _tokenAddress,
+        address _managerAddress,
+        string memory _uri
+    ) {
         tokenAddress = _tokenAddress;
         tokenInterface = TokenInterface(tokenAddress);
         tokenPriceFeed = AggregatorV3Interface(
@@ -31,11 +33,16 @@ contract UserCarContract {
         );
         owner = msg.sender;
         manager = _managerAddress;
-		uri = _uri;
+        uri = _uri;
     }
 
     modifier onlyOwner() {
         require(msg.sender == owner);
+        _;
+    }
+
+    modifier onlyManager() {
+        require(msg.sender == manager);
         _;
     }
 
@@ -46,9 +53,9 @@ contract UserCarContract {
 
     function tokenAmount(uint256 amountBTGDol) public view returns (uint256) {
         uint256 btgDol = uint256(getLatestTokenPrice()); //with 6 decimal places
-        uint256 amountUSD = (amountBTGDol * btgDol) / 10 ** 6; // calculate amount in USD of BTG DOL
-        uint256 amountToken = (amountUSD * 10 ** 2) / tokenPrice; // calculate amount in token with 2 decimal places
-        return amountToken; // return amount in token with 2 decimal places
+        uint256 amountUSD = (amountBTGDol * btgDol) / 1000000; //with 6 decimal places
+        uint256 amountToken = (amountUSD * 100) / tokenPrice; //with 6 decimal places
+        return amountToken;
     }
 
     receive() external payable {
@@ -62,5 +69,11 @@ contract UserCarContract {
         emit BuyToken(msg.sender, amountToken);
     }
 
-	function
+    function addTokens(uint256 amount) public onlyManager {
+        tokenBalance += amount;
+    }
+
+    function getURI() public view returns (string memory) {
+        return uri;
+    }
 }

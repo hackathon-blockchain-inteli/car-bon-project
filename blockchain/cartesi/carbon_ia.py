@@ -18,7 +18,7 @@ import requests
 
 from modules.AI import Predictor, AIPredictionType
 from modules.utils import Utils
-
+from modules.contracts import MintContract, RequestsRedirect
 
 logging.basicConfig(level="DEBUG")
 logger = logging.getLogger(__name__)
@@ -32,16 +32,9 @@ class AdvanceStatus:
     REJECT = "reject"
 
 
-def handle_advance(data):
-
-    # Default use accept as status code before processing data
-    current_status = AdvanceStatus.ACCEPT
-
-    try:
-        # Convert advance raw data to json info
-        input_json = Utils.advance_data2json(data)
-        logger.debug(f"Received advance request data: {input_json}")
-
+class AdvanceStates:
+    @staticmethod
+    def prediction(input_json):
         # Predict with the data received from the two models
         predicted_month = Predictor.predict(
             input_json["week_list"], AIPredictionType.MONTH)
@@ -59,11 +52,34 @@ def handle_advance(data):
 
         # Convert response json to hex string and send it to the notice endpoint
         response_hex = Utils.str2hex(str(response_json))
-        response = requests.post(
-            rollup_server + "/notice", json={"payload": response_hex})
+        response = RequestsRedirect.send_notice(
+            rollup_server, {"payload": response_hex})
 
         logger.info(
             f"Received notice status {response.status_code} body {response.content}")
+
+    @staticmethod
+    def mint_token(input_json):
+        mint_contract = MintContract(
+            input_json["contract_address"], rollup_server)
+
+        mint_contract.run(input_json["depositor"], input_json["amount"])
+
+
+def handle_advance(data):
+
+    # Default use accept as status code before processing data
+    current_status = AdvanceStatus.ACCEPT
+
+    try:
+        # Convert advance raw data to json info
+        input_json = Utils.advance_data2json(data)
+        logger.debug(f"Received advance request data: {input_json}")
+
+        if input_json["type"] == "prediction":
+            AdvanceStates.prediction(input_json)
+        elif input_json["type"] == "mint_token":
+            AdvanceStates.mint_token(input_json)
 
     except Exception as e:
         status = AdvanceStatus.REJECT
@@ -82,8 +98,9 @@ def handle_advance(data):
 def handle_inspect(data):
     logger.info(f"Received inspect request data {data}")
     logger.info("Adding report")
-    response = requests.post(rollup_server + "/report",
-                             json={"payload": data["payload"]})
+    response = RequestsRedirect.send_report(
+        rollup_server, {"payload": data["payload"]})
+
     logger.info(f"Received report status {response.status_code}")
     return AdvanceStatus.ACCEPT
 
