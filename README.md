@@ -32,47 +32,26 @@ The system functionalities include:
   &emsp;| --> cartesi <br>
   &emsp;| &emsp;| --> AI <br>
   &emsp;| &emsp;| --> errors <br>
-  &emsp;| &emsp;| --> modules
-  &emsp;| &emsp;| --> std-rootfs
-  &emsp;| -->src
-  &emsp;| &emsp;| -->modules
-|--> embedded<br>
-|--> frontend<br>
-
-  <br>
-  &emsp;| T2_G4_V01_Web_application_document.docx<br>
-  &emsp;|--> Backend<br>
-  &emsp;|--> Frontend<br>
-| readme.md<br>
-| license.txt
-
-  |  ├── Backend
-  |  │   ├── _artifacts
-  │  │   ├── src
-  │  │   &emsp;  ├── modules
-  │  ├── blockchain
-  │  │   ├── _cartesi
-  │  │   ├── │   ├── AI
-  │  │   ├── │   ├── errors
-  |  │   ├── │   ├── modules
-  |  │   └── │   ├── std-rootfs
-  |  ├── embedded
-  |  │   ├── _buttons.scss
-  |  │   ├── _forms.scss
-  |  │   ├── _inputs.scss
-  |  │   ├── _links.scss
-  |  │   ├── _lists.scss
-  |  │   ├── _sprite.scss
-  |  │   ├── _tables.scss
-  |  │   └── _types.scss
-  |  ├── frontend
-  |  │   ├── _home.scss
-  |  │   ├── _departamento.scss
-  |  │   ├── _categoria.scss
-  |  │   ├── _produto.scss
-  |  │   └── _institucional.scss
-  |  ├── readme.md
-  |  ├── license.txt
+  &emsp;| &emsp;| --> modules <br>
+  &emsp;| &emsp;| --> std-rootfs <br>
+  &emsp;| --> contracts <br>
+|--> embedded<br> 
+  &emsp;| --> include<br>
+  &emsp;| &emsp;| --> sensors <br>
+  &emsp;| --> lib<br>
+  &emsp;| --> src<br>
+  &emsp;| &emsp;| --> sensors <br>
+  &emsp;| --> test<br>
+  &emsp;| &emsp;| -->modules <br>
+  |--> frontend<br>
+    &emsp;| --> public<br>
+    &emsp;| --> src<br>
+    &emsp;| &emsp;| --> assets <br>
+    &emsp;| &emsp;| --> componentes <br>
+    &emsp;| &emsp;| --> contexts <br>
+    &emsp;| &emsp;| --> pages <br>
+|--> License<br>
+|--> Readme.md<br>
 
 ## Technologies
 
