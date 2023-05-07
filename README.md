@@ -25,11 +25,20 @@ The system functionalities include:
 
 ## Folders structure 
 |--> Backend<br>
+  &emsp;| --> artifacts <br>
+  &emsp;| -->src
+  &emsp;| &emsp;| -->modules
 |--> blockchain<br>
+  &emsp;| --> cartesi <br>
+  &emsp;| &emsp;| --> AI
+  &emsp;| &emsp;| --> errors
+  &emsp;| &emsp;| --> modules
+  &emsp;| &emsp;| --> std-rootfs
+  &emsp;| -->src
+  &emsp;| &emsp;| -->modules
 |--> embedded<br>
 |--> frontend<br>
-  &emsp;| --> artifacts <br>
-  &emsp;| -->srcb
+
   <br>
   &emsp;| T2_G4_V01_Web_application_document.docx<br>
   &emsp;|--> Backend<br>
