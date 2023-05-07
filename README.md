@@ -30,8 +30,8 @@ The system functionalities include:
   &emsp;| &emsp;| -->modules
 |--> blockchain<br>
   &emsp;| --> cartesi <br>
-  &emsp;| &emsp;| --> AI
-  &emsp;| &emsp;| --> errors
+  &emsp;| &emsp;| --> AI <br>
+  &emsp;| &emsp;| --> errors <br>
   &emsp;| &emsp;| --> modules
   &emsp;| &emsp;| --> std-rootfs
   &emsp;| -->src
