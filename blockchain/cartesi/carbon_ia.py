@@ -37,7 +37,7 @@ class AdvanceStates:
     def prediction(input_json):
         # Predict with the data received from the two models
         predicted_month = Predictor.predict(
-            input_json["week_list"], AIPredictionType.MONTH)
+            input_json["    "], AIPredictionType.MONTH)
         predicted_year = Predictor.predict(
             input_json["week_list"], AIPredictionType.YEAR)
 
@@ -73,15 +73,15 @@ def handle_advance(data):
 
     try:
         # Convert advance raw data to json info
-        input_json = Utils.advance_data2json(data)
+        input_json = json.loads(data["payload"])
         logger.debug(f"Received advance request data: {input_json}")
 
-        if input_json["type"] == "prediction":
+        if input_json.get("type", None) == "prediction":
             AdvanceStates.prediction(input_json)
-        elif input_json["type"] == "mint_token":
+        elif input_json.get("type", None) == "mint_token":
             AdvanceStates.mint_token(input_json)
         else:
-            logger.error(f"Unknown advance type: {input_json['type']}")
+            logger.error(f"Unknown advance type")
             current_status = AdvanceStatus.REJECT
 
     except Exception as e:

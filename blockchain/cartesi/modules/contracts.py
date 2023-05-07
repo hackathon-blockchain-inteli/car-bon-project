@@ -39,8 +39,9 @@ class MintContract:
         self.rollup_server = rollup_server
 
     def __generate_payload(self, depositor, amount):
-        #return MINT_FUNCTION_TOKEN + encode(['address', 'uint256'], [depositor, amount])
-		return NotImplementedError("Not implemented by error on import with 'eth_abi' library")
+        # return MINT_FUNCTION_TOKEN + encode(['address', 'uint256'], [depositor, amount])
+        # Not implemented yet because of eth_abi dependency issue ( Not found in pip )
+        return None
 
     def __generate_voucher(self):
         return Voucher(self.address, f'0x{self.__generate_payload().hex()}')
