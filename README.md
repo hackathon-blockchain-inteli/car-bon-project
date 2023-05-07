@@ -51,8 +51,7 @@ Carbon collects carbon emission data from cars using IoT, encouraging the use of
 
 ## Arquithecture
 The architecture of a system consists of the structure, behavior, and relationships between software and hardware components. It involves the systematization of interactions that are conceived in the system. The image below demonstrates the architecture of the Carbon development.
-![image](https://user-images.githubusercontent.com/99264876/236661696-f9960a95-ed63-49cf-a5b4-a5c300561e9d.png)
-
+![Arquitetura do sistema - CarBon](https://user-images.githubusercontent.com/40807526/236663082-5f4241c2-eced-447b-ae16-1570f060f854.png)
 
 ## Layout
 
