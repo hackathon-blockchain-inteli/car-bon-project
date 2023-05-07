@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
       <div className={styles.navMap}>
         <a href="/">Home</a>
         <a href="/exchange">Exchange Credits</a>
-        <a href="/cars">Transaction history</a>
+        <a href="/transparency">Transaction history</a>
         <a href="/cars">My Space</a>
         <a href="/faq">FAQ</a>
         <a href="/faq">Transparency</a>

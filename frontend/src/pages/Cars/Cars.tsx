@@ -3,71 +3,68 @@ import styles from "./Cars.module.scss";
 import NavBar from '../../componentes/NavBar/NavBar';
 import FootBar from '../../componentes/FootBar/FootBar';
 import { GrAddCircle } from 'react-icons/gr';
-import { useState, useContext } from 'react';
-import { ethers } from "ethers";
-import { toast } from 'react-toastify';
-import axios from 'axios';
-import AddCarCtx from '../../contexts/AddCar-ctx.tsx';
+// import { useState, useContext } from 'react';
+// import { toast } from 'react-toastify';
+// import axios from 'axios';
+// import AddCarCtx from '../../contexts/AddCar-ctx.tsx';
 import AddCard from '../../componentes/Modais/AddCar/AddCar.tsx';
-import Table from '../../componentes/Table/Table.tsx';
 
-// Conectar o usuario ao metamask na rede mumbai
 
-const BlockchainIntegration = {
-  connectToMetamask: async () => {
-    if (window.ethereum) {
-      try {
-        const res = await window.ethereum.request({
-          method: "eth_requestAccounts",
-        })
-        const mumbaiNetwork = "0x13881"
-        if (window.ethereum.chainId !== mumbaiNetwork) {
-          await window.ethereum.request({
-            method: "wallet_switchEthereumChain",
-            params: [{ chainId: mumbaiNetwork }],
-          })
-        }
-        return res[0]
+// interface Window {
+//   ethereum: any
+// }
 
-      } catch (err) {
-        console.error(err)
-      }
-    } else {
-      toast.error("Install MetaMask")
-    }
-  },
-}
+// const BlockchainIntegration = {
+//   connectToMetamask: async () => {
+//     if (window.ethereum) {
+//       try {
+//         const res = await window.ethereum.request({
+//           method: "eth_requestAccounts",
+//         })
+//         const mumbaiNetwork = "0x13881"
+//         if (window.ethereum.chainId !== mumbaiNetwork) {
+//           await window.ethereum.request({
+//             method: "wallet_switchEthereumChain",
+//             params: [{ chainId: mumbaiNetwork }],
+//           })
+//         }
+//         return res[0]
 
-// Axios para puxar do banco as tabelas
+//       } catch (err) {
+//         console.error(err)
+//       }
+//     } else {
+//       toast.error("Install MetaMask")
+//     }
+//   },
+// }
 
-axios.get('/api/tabela')
-  .then(response => {
-    const { datetime, type, value, hash, coppm } = response.data;
-    const data = [
-      { datetime, type, value, hash, coppm},
-    ];
-  })
-  .catch(error => {
-    console.error(error);
-  });
+// axios.get('/api/tabela')
+//   .then(response => {
+//     const { datetime, type, value, hash, coppm } = response.data;
+//     const data = [
+//       { datetime, type, value, hash, coppm},
+//     ];
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   });
 
 // chama a função de um contrato
 
 const Cars: React.FC = () => {
-  const { showModalHandler } = useContext(AddCarCtx);
+  // const { showModalHandler } = useContext(AddCarCtx);
 
-  const AddCarModal = () => {
-    showModalHandler();
-  };
+  // const AddCarModal = () => {
+  //   showModalHandler();
+  // };
 
-  const modalCtx = useContext(AddCarCtx);
+  // const [account, setAccount] = useState('');
 
-  const [account, setAccount] = useState('');
-
-  const handleClick = async () => {
-    const userAccount = await BlockchainIntegration.connectToMetamask();
-    setAccount(userAccount);
-  };
+  // const handleClick = async () => {
+  //   const userAccount = await BlockchainIntegration.connectToMetamask();
+  //   setAccount(userAccount);
+  // };
 
   return (
     <div>
@@ -78,7 +75,7 @@ const Cars: React.FC = () => {
           <div className={styles.introCars}>
             <div>
               <h1>Your Cars</h1>
-              <button onClick={AddCarModal}><GrAddCircle size={24} /></button>
+              <button><GrAddCircle size={24} /></button>
             </div>
             <span>
               <p>Current credits</p>
@@ -86,9 +83,8 @@ const Cars: React.FC = () => {
             </span>
           </div>
           <div className={styles.listCars}>
-            <button onClick={handleClick}>Personal Car</button> {/*Puxar do banco */}
-            {account && <p>Connected account: {account}</p>}
-            <button>Work Car</button> {/*Puxar do banco */}
+            <button>Personal Car</button> 
+            <button>Work Car</button> 
           </div>
         </div>
         <div className={styles.identifierCar}>
@@ -116,15 +112,15 @@ const Cars: React.FC = () => {
           <div>
             <div className={styles.field}>
               <label>Week:</label>
-              <input disabled placeholder="Puxar do banco"/>
+              <input disabled placeholder="2.345 CT"/>
             </div>
             <div className={styles.field}>
               <label>Month:</label>
-              <input disabled placeholder="Puxar do banco"/>
+              <input disabled placeholder="9.369 CT"/>
             </div>
             <div className={styles.field}>
               <label>Year:</label>
-              <input disabled placeholder="Puxar do banco"/>
+              <input disabled placeholder="117.452 CT"/>
             </div>
           </div>
         </div>

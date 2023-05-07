@@ -7,7 +7,7 @@ const SignUp: React.FC = () => {
 
   const [selectedOption, setSelectedOption] = useState('');
 
-  const handleOptionChange = (e) => {
+  const handleOptionChange = (e: any) => {
     setSelectedOption(e.target.value);
   }
 
