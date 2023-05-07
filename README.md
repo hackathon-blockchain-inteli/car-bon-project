@@ -52,6 +52,9 @@ The system functionalities include:
  - Gas and Acelerometer sensors
  - OLED display
  
+ ![image](https://user-images.githubusercontent.com/99264876/236664671-7f2171b1-9cc1-469c-b52c-cb8b45d9ecbb.png)
+
+ 
  ### Artificial Intelligence:
  - Python
  
