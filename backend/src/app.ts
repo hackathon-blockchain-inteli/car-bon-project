@@ -31,7 +31,8 @@ app.use(express.json());
 app.listen(+PORT, HOST, () => {
 	console.log(`Server running on http://${HOST}:${PORT}`);
 
-	mqttModule.addTopic('0x72ac37F2B8685300a6B3781669a487eBb94a5CCd'); // Add topic for contract address (test contract)
+	mqttModule.addTopic('0x5FbDB2315678afecb367f032d93F642f64180aa3/co2'); // Add topic for contract address (test contract)
+	mqttModule.addTopic('0x5FbDB2315678afecb367f032d93F642f64180aa3/acceleration'); // Add topic for contract address (test contract)
 	mqttModule.setCallback((topic, payload) => {
 		console.log(`[MQTT] Message received on topic ${topic}: ${payload.toString()}`);
 	});
