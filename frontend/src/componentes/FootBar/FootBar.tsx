@@ -11,11 +11,11 @@ const FootBar: React.FC = () => {
         </div>
         <div className={styles.siteMap}>
           <h2>Sitemap</h2>
-          <p>Home</p>
-          <p>Exchange Credits</p>
-          <p>Transaction history</p>
-          <p>Profile</p>
-          <p>Transparency</p>
+          <a href="/">Home</a>
+          <a href="/exchange">Exchange Credits</a>
+          <a href="/transparency">Transaction history</a>
+          <a href="/cars">Cars</a>
+          <a href="/">Transparency</a>
         </div>
         <div className={styles.footerButton}>
           <button>Be a part of <span>this</span></button>

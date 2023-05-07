@@ -29,14 +29,15 @@ html{
   display: flex;
   flex-direction: row;
 
-  p{
+  a{
     margin-right: 30px;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
   }
 
-  p:hover{
+  a:hover{
     border-bottom: 1px solid black;
     color: #179D14;
-    cursor: pointer;
   }
 
 }

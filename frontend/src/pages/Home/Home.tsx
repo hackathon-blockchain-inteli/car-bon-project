@@ -2,11 +2,12 @@ import React from 'react';
 import styles from "./Home.module.scss";
 import NavBar from '../../componentes/NavBar/NavBar';
 import FootBar from '../../componentes/FootBar/FootBar';
-import Mockup from '../../assets/mockup.png'
 import car from '../../assets/car.png';
 import stplace from '../../assets/stplace.png';
 import ndplace from '../../assets/ndplace.png';
 import thplace from '../../assets/thplace.png';
+import Preserve from '../../assets/Preserve.png';
+
 
 const Home: React.FC = () => {
   return (
@@ -19,8 +20,8 @@ const Home: React.FC = () => {
             <p>Buy/Generate Offset Carbon tokens through Car's registrations</p>
             <button>Get Started</button>
           </div>
-          <div>
-            <img src={Mockup}></img>
+          <div className={styles.divImg}>
+            <img src={Preserve}></img>
           </div>
         </div>
         <div className={styles.benefits}>

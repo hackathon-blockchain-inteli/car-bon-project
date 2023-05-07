@@ -24,11 +24,10 @@ body, html{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
     width: 50%;
+    
     img{
-     width: 1000px;
-     height: 500px;
+     width: 400px;
     }
 
     button{
@@ -54,6 +53,12 @@ body, html{
       text-align: justify;
     }
   }
+}
+
+.divImg{
+  display: flex;
+  justify-content: center;
+  padding-left: 150px;
 }
 
 .benefits{

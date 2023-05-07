@@ -8,14 +8,14 @@ const NavBar: React.FC = () => {
         <h1><span>Car</span>bon</h1>
       </div>
       <div className={styles.navMap}>
-        <p>Home</p>
-        <p>Exchange Credits</p>
-        <p>Transaction history</p>
-        <p>Cars</p>
-        <p>FAQ</p>
+        <a href="/">Home</a>
+        <a href="/exchange">Exchange Credits</a>
+        <a href="/cars">Transaction history</a>
+        <a href="/cars">My Space</a>
+        <a href="/faq">FAQ</a>
+        <a href="/faq">Transparency</a>
       </div>
       <div className={styles.buttonFocus}>
-        <p>Transparency</p>
         <button>Be a part of <span>this</span></button>
       </div>
     </div>

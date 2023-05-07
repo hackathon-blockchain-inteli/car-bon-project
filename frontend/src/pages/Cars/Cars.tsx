@@ -3,10 +3,13 @@ import styles from "./Cars.module.scss";
 import NavBar from '../../componentes/NavBar/NavBar';
 import FootBar from '../../componentes/FootBar/FootBar';
 import { GrAddCircle } from 'react-icons/gr';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { ethers } from "ethers";
 import { toast } from 'react-toastify';
 import axios from 'axios';
+import AddCarCtx from '../../contexts/AddCar-ctx.tsx';
+import AddCard from '../../componentes/Modais/AddCar/AddCar.tsx';
+import Table from '../../componentes/Table/Table.tsx';
 
 // Conectar o usuario ao metamask na rede mumbai
 
@@ -40,6 +43,9 @@ const BlockchainIntegration = {
 axios.get('/api/tabela')
   .then(response => {
     const { datetime, type, value, hash, coppm } = response.data;
+    const data = [
+      { datetime, type, value, hash, coppm},
+    ];
   })
   .catch(error => {
     console.error(error);
@@ -48,6 +54,14 @@ axios.get('/api/tabela')
 // chama a função de um contrato
 
 const Cars: React.FC = () => {
+  const { showModalHandler } = useContext(AddCarCtx);
+
+  const AddCarModal = () => {
+    showModalHandler();
+  };
+
+  const modalCtx = useContext(AddCarCtx);
+
   const [account, setAccount] = useState('');
 
   const handleClick = async () => {
@@ -58,12 +72,13 @@ const Cars: React.FC = () => {
   return (
     <div>
       <NavBar />
+      <AddCard />
       <div className={styles.container}>
         <div className={styles.yourCars}>
           <div className={styles.introCars}>
             <div>
               <h1>Your Cars</h1>
-              <button><GrAddCircle size={24} /></button>
+              <button onClick={AddCarModal}><GrAddCircle size={24} /></button>
             </div>
             <span>
               <p>Current credits</p>

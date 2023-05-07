@@ -33,43 +33,44 @@
     div{
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
-        height: 166px;
         background: white;
+        width: 955px;
+        padding-right: 30px;
+        padding-left: 30px;
         border-radius: 20px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
 
         img{
-            width: 150px;
-        }
-
-        button{
-            width: 166px;
-            height: 42px;
-            background: #179D14;
-            border-radius: 10px;
-            border: none;
+            width: 120px;
+            height: 120px;
         }
 
         div{
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            width: 600px;
-            height: 40px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-left: 30px;
+            margin: 0;
 
-            div{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                p {
-                    margin: 0;
-                }
+            p{
+                line-height: 1;
             }
+
         }
 
+        button{
+            width: 196px;
+            height: 35px;
+            background: #179D14;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            cursor: pointer;
+        }
     }
 
 }

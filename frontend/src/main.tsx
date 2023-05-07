@@ -7,6 +7,7 @@ import Transparency from './pages/Transparency/Transparency.tsx';
 import Home from './pages/Home/Home.tsx';
 import Cars from './pages/Cars/Cars.tsx';
 import Faq from './pages/Faq/Faq.tsx';
+import SignUp from './pages/SignUp/SignUp.tsx';
 
 
 const router = createBrowserRouter([
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
 
   {
     path: "/signup",
-    element: <App />,
+    element: <SignUp />,
   },
 
   {

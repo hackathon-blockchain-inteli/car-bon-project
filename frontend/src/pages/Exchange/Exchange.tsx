@@ -2,6 +2,7 @@ import React from 'react';
 import styles from "./Exchange.module.scss";
 import NavBar from '../../componentes/NavBar/NavBar';
 import FootBar from '../../componentes/FootBar/FootBar';
+import tst from '../../assets/tst.png';
 
 const Exchange: React.FC = () => {
   return (
@@ -14,13 +15,20 @@ const Exchange: React.FC = () => {
             </div>
             <div className={styles.cardList}>
                 <div>
-                    <img></img>
+                    <img src={tst}></img>
                     <div>
-                        <div>
-                            <p><span>Car id: </span>786867</p>
-                            <p><span>Tokens: </span>24</p>
-                        </div>
-                        <p className={styles.text}><span>Wallet adress: </span>gkfjdhsk67r5bjijnjk6fg</p>
+                        <p><span>Car id: </span>786867</p>
+                        <p><span>Tokens: </span>24</p>
+                        <p><span>Wallet adress: </span>gkfjdhsk67r5bjijnjk6fg</p>
+                    </div>
+                    <button>Buy Tokens</button>
+                </div>
+                <div>
+                    <img src={tst}></img>
+                    <div>
+                        <p><span>Car id: </span>786867</p>
+                        <p><span>Tokens: </span>24</p>
+                        <p><span>Wallet adress: </span>gkfjdhsk67r5bjijnjk6fg</p>
                     </div>
                     <button>Buy Tokens</button>
                 </div>

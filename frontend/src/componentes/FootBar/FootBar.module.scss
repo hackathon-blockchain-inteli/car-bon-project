@@ -15,17 +15,21 @@
 }
 
 .siteMap{
+  display: flex;
+  flex-direction: column;
   width: 200px;
   h2{
     color: #179D14;
     margin-bottom: 10px;
   }
 
-  p{
+  a{
     width: fit-content;
+    text-decoration: none;
+    color: white;
   }
 
-  p:hover{
+  a:hover{
     border-bottom: 1px solid white;
     color: #179D14;
     cursor: pointer;
