@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 109px;
+  margin-right: 109px;
+  background: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.yourCars{
+  display: flex;
+  flex-direction: column;
+}
+
+.introCars{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    button{
+      background: none;
+      padding: 0;
+      margin: 0;
+      border: none;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+
+  span{
+    width: 261px;
+    height: 67px;
+    background: #179D14;
+    border-radius: 10px;
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: white;
+  }
+}
+
+.listCars{
+  display: flex;
+  flex-direction: row;
+
+  button{
+    background: #FFFFFF;
+    border-radius: 10px;
+    width: 308px;
+    height: 67px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    border: 1px solid #179D14;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  button:hover{
+    background: #179D14;
+    border: 1px solid white;
+  }
+}
+
+.identifierCar{
+  display: flex;
+  flex-direction: column;
+
+  div{
+    h1{
+      margin-bottom: 0;
+    }
+
+    p{
+      margin-top: 0;
+    }
+  }
+}
+
+.infoCredits{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  div{
+    width: 308px;
+    height: 57px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    p{
+      margin: 0;
+    }
+
+    span{
+      color: #179D14;
+    }
+  }
+}
+
+.infoDash{
+  display: flex;
+  flex-direction: column;
+
+  div{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  width: 100%;
+  width: 100%;
+
+  label {
+    margin-right: 10px;
+    font-weight: lighter;
+    font-size: 1.6rem;
+    margin-bottom: 0.4rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  input {
+    background: white;
+    border: 1px solid black;
+    border-radius: 2px;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: #179D14;
+    font-family: 'Poppins', sans-serif;
+
+    &::placeholder{
+      color: #179D14;
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+
+  textarea {
+    min-height: 8rem;
+  }
+}

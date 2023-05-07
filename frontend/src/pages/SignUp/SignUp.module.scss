@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.container{
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  div{
+    display: flex;
+    flex-direction: column;
+    width: 792px;
+    background: white;
+    border-radius: 50px;
+  }
+}
+
+.intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1{
+    margin-bottom: 0;
+
+    span{
+      color: #179D14;;
+    }
+  }
+  p{
+    margin-top: 0;
+    
+  }
+}
+
+.form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 265px;
+
+  label{
+    width: 249px;
+  }
+
+  input{
+    width: 249px;
+    height: 33px;
+  }
+}
+
+.typeAccount{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+
+  div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+.buttonReg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+
+  button{
+    width: 249px;
+    height: 48px;
+    background: #179D14;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+  }
+}
