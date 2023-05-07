@@ -49,7 +49,7 @@ The system functionalities include:
   |  ├── Backend
   |  │   ├── _artifacts
   │  │   ├── src
-  │  │   ├── │   ├── modules
+  │  │   &emsp;  ├── modules
   │  ├── blockchain
   │  │   ├── _cartesi
   │  │   ├── │   ├── AI
