@@ -80,6 +80,9 @@ def handle_advance(data):
             AdvanceStates.prediction(input_json)
         elif input_json["type"] == "mint_token":
             AdvanceStates.mint_token(input_json)
+        else:
+            logger.error(f"Unknown advance type: {input_json['type']}")
+            current_status = AdvanceStatus.REJECT
 
     except Exception as e:
         status = AdvanceStatus.REJECT
