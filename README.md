@@ -91,13 +91,13 @@ The system functionalities include:
  - Cartesi Machine with Custom Rollup runing AI
 
 ## Instructions to run the project
-1° The user should open the repository and clone the project to your computer
-2° It is necessary to open the project file in a tool like "visual studio code"
-3° After that it is necessary to open the terminal and give the command "npm i"
-4° After the command "npm i" the user must give the command to run the project "npm run dev"
-5° When the user gives the command, a URL like the following image will appear in the terminal:
-![image](https://user-images.githubusercontent.com/99264876/236677831-04ca77b2-50e1-429f-8d08-794153fa676b.png)
-6° The user can press "ctrl + click" to open in the browser or copy the URL and paste it in his browser
+1° The user should open the repository and clone the project to your computer <br>
+2° It is necessary to open the project file in a tool like "visual studio code" <br>
+3° After that it is necessary to open the terminal and give the command "npm i" <br>
+4° After the command "npm i" the user must give the command to run the project "npm run dev" <br>
+5° When the user gives the command, a URL like the following image will appear in the terminal: <br>
+![image](https://user-images.githubusercontent.com/99264876/236677831-04ca77b2-50e1-429f-8d08-794153fa676b.png) <br>
+6° The user can press "ctrl + click" to open in the browser or copy the URL and paste it in his browser <br>
 
 
 ## Arquithecture
