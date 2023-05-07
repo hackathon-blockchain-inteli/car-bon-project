@@ -99,6 +99,7 @@ The system functionalities include:
 ![image](https://user-images.githubusercontent.com/99264876/236677831-04ca77b2-50e1-429f-8d08-794153fa676b.png) <br>
 6° The user can press "ctrl + click" to open in the browser or copy the URL and paste it in his browser <br>
 
+And the project is available on AWS, and the link is as follows: [Link](http://carbon-inteliblockchain.s3-website-us-east-1.amazonaws.com/) 
 
 ## Arquithecture
 The architecture of a system consists of the structure, behavior, and relationships between software and hardware components. It involves the systematization of interactions that are conceived in the system. The image below demonstrates the architecture of the Carbon development.
