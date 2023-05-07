@@ -50,6 +50,7 @@ Carbon collects carbon emission data from cars using IoT, encouraging the use of
  - Cartesi Machine with Custom Rollup runing AI
 
 ## Arquithecture
+![image](https://user-images.githubusercontent.com/99264876/236661696-f9960a95-ed63-49cf-a5b4-a5c300561e9d.png)
 
 
 ## Layout
