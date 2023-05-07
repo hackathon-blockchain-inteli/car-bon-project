@@ -63,7 +63,14 @@ $ DAPP_NAME=carbon_ia docker compose --env-file ./env.polygon_mumbai -f ./docker
 #### Send payloads to advance the state of the cartesi machine nodes:
 
 ```shell
-$ yarn start input send --payload <hex_payload> --addressFile deployments/polygon_mumbai/carbon_ia.json
+$ yarn start input send --payload <json_payload> --addressFile deployments/polygon_mumbai/carbon_ia.json
+```
+
+Example:
+Using base values of week 20,33,44,55,21,50,40...
+
+```shell
+$ yarn start input send --payload '{"type":"prediction","week_list":[20,33,44,55,21,50,40],"contract_address":"0x72ac37F2B8685300a6B3781669a487eBb94a5CCd"}' --addressFile deployments/polygon_mumbai/carbon_ia.json
 ```
 
 #### Read the noticies list from the cartesi machine:
