@@ -48,12 +48,12 @@ The system functionalities include:
 
   |  ├── Backend
   |  │   ├── _artifacts
-  |  │   ├── src
-  |  │   ├── │   ├── modules
-  |  ├── blockchain
-  |  │   ├── _cartesi
-  |  │   ├── │   ├── AI
-  |  │   ├── │   ├── errors
+  │  │   ├── src
+  │  │   ├── │   ├── modules
+  │  ├── blockchain
+  │  │   ├── _cartesi
+  │  │   ├── │   ├── AI
+  │  │   ├── │   ├── errors
   |  │   ├── │   ├── modules
   |  │   └── │   ├── std-rootfs
   |  ├── embedded
