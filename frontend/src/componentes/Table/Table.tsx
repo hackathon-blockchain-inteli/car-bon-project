@@ -1,7 +1,17 @@
-import React from 'react';
 import styles from './Table.module.scss'
 
-const Table: React.FC = ({ data }) => {
+interface TableProps {
+  data: TableData[];
+}
+interface TableData {
+  column1: string;
+  column2: string;
+  column3: string;
+  column4: string;
+  column5: string;
+}
+
+const Table = ({ data }: TableProps) => {
   return (
     <table className={styles.table}>
       <thead>
@@ -14,13 +24,13 @@ const Table: React.FC = ({ data }) => {
         </tr>
       </thead>
       <tbody>
-        {data.map((row) => (
-          <tr key={row.id}>
-            <td>{row.coluna1}</td>
-            <td>{row.coluna2}</td>
-            <td>{row.coluna3}</td>
-            <td>{row.coluna4}</td>
-            <td>{row.coluna5}</td>
+      {data.map((rowData, index) => (
+          <tr key={index}>
+            <td>{rowData.column1}</td>
+            <td>{rowData.column2}</td>
+            <td>{rowData.column3}</td>
+            <td>{rowData.column4}</td>
+            <td>{rowData.column5}</td>
           </tr>
         ))}
       </tbody>
