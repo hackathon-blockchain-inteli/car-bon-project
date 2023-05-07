@@ -4,16 +4,19 @@ from sklearn import svm
 from sklearn.preprocessing import StandardScaler
 from sys import argv
 
+
 class CarbonAI:
     def __init__(self, model_name, csv_file, exclude, dependent_var):
         self.data_frame = pd.read_csv(csv_file)
-        self.include = [col for col in self.data_frame.columns if col not in exclude]
+        self.include = [
+            col for col in self.data_frame.columns if col not in exclude]
         self.dependent_var = dependent_var
         self.model_name = model_name
 
     def normalize_scale(self):
         self.scaler = StandardScaler()
-        self.train_df_scaled = pd.DataFrame(self.scaler.fit_transform(self.data_frame[self.include]), columns=self.include)
+        self.train_df_scaled = pd.DataFrame(self.scaler.fit_transform(
+            self.data_frame[self.include]), columns=self.include)
         self.x = self.scaler.fit_transform(self.x)
 
     def train_model(self):

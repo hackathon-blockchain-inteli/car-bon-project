@@ -1,0 +1,5 @@
+{
+	"fs": {
+		"files": ["carbon_ia.py", "month_model.py", "year_model.py", "errors/base.py", "errors/AI.py", "modules/AI.py", "modules/contract_controller.py", "modules/utils.py", "entrypoint.sh"]
+	}
+}
