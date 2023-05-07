@@ -1,83 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
-.container{
-    display: flex;
-    flex-direction: column;
-    margin-right: 109px;
-    margin-left: 109px;
-    font-family: 'Poppins', sans-serif;
+.container {
+	display: flex;
+	flex-direction: column;
+	margin-right: 109px;
+	margin-left: 109px;
+	font-family: 'Poppins', sans-serif;
 }
 
-.intro{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.intro {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 
-    div{
-        border: 1px solid #179D14;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 45px;
-        width: 286px;
-
-    }
+	div {
+		border: 1px solid #179d14;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 45px;
+		width: 286px;
+	}
 }
 
-.cardList{
-    display: flex;
-    flex-direction: column;
+.cardList {
+	display: flex;
+	flex-direction: column;
 
-    div{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        background: white;
-        width: 955px;
-        padding-right: 30px;
-        padding-left: 30px;
-        border-radius: 20px;
-        margin-bottom: 20px;
+	div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		background: white;
+		width: 955px;
+		padding-right: 30px;
+		padding-left: 30px;
+		border-radius: 20px;
+		margin-bottom: 20px;
 
-        img{
-            width: 120px;
-            height: 120px;
-        }
+		img {
+			width: 120px;
+			height: 120px;
+		}
 
-        div{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            padding-left: 30px;
-            margin: 0;
+		div {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			padding-left: 30px;
+			margin: 0;
 
-            p{
-                line-height: 1;
-            }
+			p {
+				line-height: 1;
+			}
+		}
 
-        }
-
-        button{
-            width: 196px;
-            height: 35px;
-            background: #179D14;
-            border-radius: 10px;
-            border: none;
-            font-family: 'Poppins', sans-serif;
-            color: white;
-            cursor: pointer;
-        }
-    }
-
+		button {
+			width: 196px;
+			height: 35px;
+			background: #179d14;
+			border-radius: 10px;
+			border: none;
+			font-family: 'Poppins', sans-serif;
+			color: white;
+			cursor: pointer;
+		}
+	}
 }
 
-.text{
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    margin: 0;
+.text {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	margin: 0;
+}
+
+.carImg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 20px;
 }

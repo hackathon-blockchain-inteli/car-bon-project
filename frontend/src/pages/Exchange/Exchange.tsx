@@ -2,12 +2,13 @@ import React from 'react';
 import styles from './Exchange.module.scss';
 import NavBar from '../../componentes/NavBar/NavBar';
 import FootBar from '../../componentes/FootBar/FootBar';
-import tst from '../../assets/tst.png';
+import add from '../../assets/add.png';
+import volvo from '../../assets/volvo.jpg';
 
-function generateCard(id: number, tokens: number, wallet: string) {
+function generateCard(id: number, tokens: number, wallet: string, img?: any) {
 	return (
 		<div>
-			<img src={tst}></img>
+			<img src={img ? img : volvo} alt="car" className={styles.carImg} />
 			<div>
 				<p>
 					<span>Car id: </span>
@@ -37,9 +38,8 @@ const Exchange: React.FC = () => {
 					<div>Token's value: 100 BTG dol</div>
 				</div>
 				<div className={styles.cardList}>
-					{generateCard(1, 100, '0x123456789')}
-					{generateCard(2, 100, '0x123456789')}
-					{generateCard(3, 100, '0x123456789')}
+					{generateCard(1, 100, '0x123456789', add)}
+					{generateCard(2, 100, '0x123456789', volvo)}
 				</div>
 				<div className={styles.cardList}></div>
 			</div>
