@@ -10,7 +10,7 @@ Tudo isso, graças a união de um dispositivo IoT, uma plataforma web, e as infi
 - Bruno Otávio Bezerra de Meira (User Experience, business and front-end development);
 - Eduardo Santos Barreto (Artificial Intelligence, IoT and back-end development);
 - Mariana Silva de Paula (Business and front-end development);
-- Vinicios Venâncio Lugli (bBck-end development and BlockChain);
+- Vinicios Venâncio Lugli (back-end development and BlockChain);
 
 ## Our solution
 Carbon coleta dados de emissão de carbono em carros utilizando IoT, incentivando o uso de carros elétricos ou híbridos. Os dados coletados são interpretados e podem gerar créditos de carbono na blockchain, que podem ser vendidos na própria plataforma para empresas que desejam compensar sua pegada de carbono.
