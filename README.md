@@ -26,8 +26,8 @@ The system functionalities include:
 ## Folders structure 
 |--> Backend<br>
   &emsp;| --> artifacts <br>
-  &emsp;| -->src
-  &emsp;| &emsp;| -->modules
+  &emsp;| -->src <br>
+  &emsp;| &emsp;| -->modules <br>
 |--> blockchain<br>
   &emsp;| --> cartesi <br>
   &emsp;| &emsp;| --> AI <br>
