@@ -13,10 +13,10 @@ const NavBar: React.FC = () => {
         <a href="/transparency">Transaction history</a>
         <a href="/cars">My Space</a>
         <a href="/faq">FAQ</a>
-        <a href="/faq">Transparency</a>
+        {/* <a href="/faq">Transparency</a> */}
       </div>
       <div className={styles.buttonFocus}>
-        <button>Be a part of <span>this</span></button>
+        <a href='/signup'><button className={styles.buttonn}>Be a part of <span>this</span></button></a>
       </div>
     </div>
   );

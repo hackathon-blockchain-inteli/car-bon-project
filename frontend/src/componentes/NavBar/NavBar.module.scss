@@ -86,3 +86,22 @@ html{
   }
 
 }
+
+.buttonn{
+  font-family: 'Poppins', sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #179D14;
+  border-radius: 10px;
+  background: none;
+  margin-left: 15px;
+  height: 48px;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 5px;
+
+  span{
+    color: #179D14;
+  }
+
+}

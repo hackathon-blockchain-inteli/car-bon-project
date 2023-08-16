@@ -3,8 +3,8 @@ import styles from "./Cars.module.scss";
 import NavBar from '../../componentes/NavBar/NavBar';
 import FootBar from '../../componentes/FootBar/FootBar';
 import { GrAddCircle } from 'react-icons/gr';
-// import { useState, useContext } from 'react';
-// import { toast } from 'react-toastify';
+import { useState, useContext } from 'react';
+import { toast } from 'react-toastify';
 // import axios from 'axios';
 // import AddCarCtx from '../../contexts/AddCar-ctx.tsx';
 import AddCard from '../../componentes/Modais/AddCar/AddCar.tsx';
@@ -14,30 +14,30 @@ import AddCard from '../../componentes/Modais/AddCar/AddCar.tsx';
 //   ethereum: any
 // }
 
-// const BlockchainIntegration = {
-//   connectToMetamask: async () => {
-//     if (window.ethereum) {
-//       try {
-//         const res = await window.ethereum.request({
-//           method: "eth_requestAccounts",
-//         })
-//         const mumbaiNetwork = "0x13881"
-//         if (window.ethereum.chainId !== mumbaiNetwork) {
-//           await window.ethereum.request({
-//             method: "wallet_switchEthereumChain",
-//             params: [{ chainId: mumbaiNetwork }],
-//           })
-//         }
-//         return res[0]
+const BlockchainIntegration = {
+  connectToMetamask: async () => {
+    if (window.ethereum) {
+      try {
+        const res = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        })
+        const mumbaiNetwork = "0x13881"
+        if (window.ethereum.chainId !== mumbaiNetwork) {
+          await window.ethereum.request({
+            method: "wallet_switchEthereumChain",
+            params: [{ chainId: mumbaiNetwork }],
+          })
+        }
+        return res[0]
 
-//       } catch (err) {
-//         console.error(err)
-//       }
-//     } else {
-//       toast.error("Install MetaMask")
-//     }
-//   },
-// }
+      } catch (err) {
+        console.error(err)
+      }
+    } else {
+      toast.error("Install MetaMask")
+    }
+  },
+}
 
 // axios.get('/api/tabela')
 //   .then(response => {
@@ -59,12 +59,12 @@ const Cars: React.FC = () => {
   //   showModalHandler();
   // };
 
-  // const [account, setAccount] = useState('');
+  const [account, setAccount] = useState('');
 
-  // const handleClick = async () => {
-  //   const userAccount = await BlockchainIntegration.connectToMetamask();
-  //   setAccount(userAccount);
-  // };
+  const handleClick = async () => {
+    const userAccount = await BlockchainIntegration.connectToMetamask();
+    setAccount(userAccount);
+  };
 
   return (
     <div>
@@ -83,6 +83,8 @@ const Cars: React.FC = () => {
             </span>
           </div>
           <div className={styles.listCars}>
+          <button onClick={handleClick}>Connect Wallet</button> {/*Puxar do banco */}
+            {account && <p>Connected account: {account}</p>}
             <button>Personal Car</button> 
             <button>Work Car</button> 
           </div>
